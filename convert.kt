@@ -6,6 +6,9 @@ fun main() {
     println("2. Miles to Kilometers")
     println("3. Centimeters to Inches")
     println("4. Inches to Centimeters")
+    println("5. Kilograms to Pounds")
+    println("6. Pounds to Kilograms")
+    println("7. Grams to Ounces")
  
 
     print("Enter the numeric value: ")
@@ -24,7 +27,10 @@ fun main() {
         1 -> convertKilometersToMiles(value)
         2 -> convertMilesToKilometers(value)
         3 -> convertCentimetersToInches(value)
-        4 -> convertInchesToCentimeters(value)
+        4 -> convertInchesToCentimeters(value)5 -> convertKilogramsToPounds(value)
+        6 -> convertPoundsToKilograms(value)
+        7 -> convertGramsToOunces(value)
+
  
         else -> {
             println("Invalid unit of measurement. Exiting the program.")
@@ -49,4 +55,15 @@ fun convertCentimetersToInches(centimeters: Double): Double {
 
 fun convertInchesToCentimeters(inches: Double): Double {
     return inches * 2.54
+}
+fun convertKilogramsToPounds(kilograms: Double): Double {
+    return kilograms * 2.2
+}
+
+fun convertPoundsToKilograms(pounds: Double): Double {
+    return pounds * 0.45
+}
+
+fun convertGramsToOunces(grams: Double): Double {
+    return grams * 0.04
 }
