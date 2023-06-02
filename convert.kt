@@ -14,4 +14,10 @@ fun main(){
     /* Asking User for Value Variable and storing  it  */
     print("Enter the numeric value: ")
     val value = readLine()?.toDoubleOrNull()
+    /* Check if Value is null or not  */
+    if (value == null) {
+        println("Invalid input. Exiting the program.")
+        return
+    }
+
 }
