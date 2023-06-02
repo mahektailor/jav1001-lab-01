@@ -3,6 +3,7 @@ fun main() {
     println("-------------------------------")
     println("Available conversions:")
     println("1. Kilometers to Miles")
+    println("2. Miles to Kilometers")
  
 
     print("Enter the numeric value: ")
@@ -19,7 +20,7 @@ fun main() {
     val result = when (unit) {
         /*function call to Km to miles*/
         1 -> convertKilometersToMiles(value)
-       
+        2 -> convertMilesToKilometers(value)
  
         else -> {
             println("Invalid unit of measurement. Exiting the program.")
@@ -34,4 +35,7 @@ fun main() {
 fun convertKilometersToMiles(kilometers: Double): Double {
     return kilometers * 0.62
 }
-
+/* FUNCTION FOR miles to kilometer */
+fun convertMilesToKilometers(miles: Double): Double {
+    return miles * 1.61
+}
