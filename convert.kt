@@ -1,23 +1,37 @@
-/*File created for lab 01 convert.kt */
-
-/*Task
-You may work in groups of up to 3 students.
-Convert.kt Write a small Kotlin command line application (Convert.kt) that allows a user to convert between different forms of measurement. The program should:
-Collect a numeric value from the user and store it in an appropriate variable
-Collect the current unit of measurement
-Determine the appropriate conversion (in either direction, i.e., the user can enter km or mi)
-Display the new result
- */
-fun main(){
-    /* Printing Program name  */
+fun main() {
     println("Measurement Conversion Program")
-    /* Asking User for Value Variable and storing  it  */
+    println("-------------------------------")
+    println("Available conversions:")
+    println("1. Kilometers to Miles")
+ 
+
     print("Enter the numeric value: ")
     val value = readLine()?.toDoubleOrNull()
-    /* Check if Value is null or not  */
+
     if (value == null) {
         println("Invalid input. Exiting the program.")
         return
     }
 
+    print("Enter the current unit of measurement: ")
+    val unit = readLine()?.toIntOrNull()
+
+    val result = when (unit) {
+        /*function call to Km to miles*/
+        1 -> convertKilometersToMiles(value)
+       
+ 
+        else -> {
+            println("Invalid unit of measurement. Exiting the program.")
+            return
+        }
+    }
+
+    println("Result: $result")
 }
+
+/* Created a function to do kilometers to miles  */
+fun convertKilometersToMiles(kilometers: Double): Double {
+    return kilometers * 0.62
+}
+
